@@ -153,7 +153,7 @@ class ThingController extends Controller
         $response = [
             'thing' => $thing
         ];
-
+        MyQueue::dispatch($thing);
         return response($response);
     }
 
